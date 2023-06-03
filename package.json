@@ -1,0 +1,15 @@
+{
+  "name": "full-featured-example-v7",
+  "scripts": {
+    "format": "prettier --write '**/*' --ignore-unknown"
+  },
+  "devDependencies": {
+    "@edgio/cli": "^7.0.15",
+    "@edgio/core": "^7.0.15",
+    "@edgio/devtools": "^7.0.15",
+    "@edgio/prefetch": "^7.0.15",
+    "@edgio/starter": "^7.0.15",
+    "cheerio": "^1.0.0-rc.12",
+    "prettier": "^2.8.8"
+  }
+}
