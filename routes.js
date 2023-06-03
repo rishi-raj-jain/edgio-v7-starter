@@ -56,6 +56,16 @@ export default new Router()
       transformResponse: (res, req) => {
         injectBrowserScript(res)
         const $ = load(responseBodyToString(res))
+        $('body').append(`
+          <script defer>
+            function initEdgioRum() {
+              new Edgio.Metrics({
+                token: '0fd2901b-39ee-4a74-add9-bc3c1afa22a8'
+              }).collect()
+            }
+          </script>
+          <script src="https://rum.edgio.net/latest.js" defer onload="initEdgioRum()" />
+        `)
         res.body = $.html().replace(/https?:\/\/files.smashing.media\//g, '/edgio-a/')
       },
     })
@@ -74,6 +84,16 @@ export default new Router()
       transformResponse: (res, req) => {
         injectBrowserScript(res)
         const $ = load(responseBodyToString(res))
+        $('body').append(`
+          <script defer>
+            function initEdgioRum() {
+              new Edgio.Metrics({
+                token: '0fd2901b-39ee-4a74-add9-bc3c1afa22a8'
+              }).collect()
+            }
+          </script>
+          <script src="https://rum.edgio.net/latest.js" defer onload="initEdgioRum()" />
+        `)
         res.body = $.html().replace(/https?:\/\/files.smashing.media\//g, '/edgio-a/')
       },
     })
@@ -95,6 +115,16 @@ export default new Router()
       transformResponse: (res, req) => {
         injectBrowserScript(res)
         const $ = load(responseBodyToString(res))
+        $('body').append(`
+          <script defer>
+            function initEdgioRum() {
+              new Edgio.Metrics({
+                token: '0fd2901b-39ee-4a74-add9-bc3c1afa22a8'
+              }).collect()
+            }
+          </script>
+          <script src="https://rum.edgio.net/latest.js" defer onload="initEdgioRum()" />
+        `)
         res.body = $.html().replace(/https?:\/\/files.smashing.media\//g, '/edgio-a/')
       },
     })
